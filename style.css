@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: azure;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+#title{
+    background-color: beige;
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-radius: 0 0 1rem 1rem;
+}
+button{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: aquamarine;
+    border-radius: 1rem;
+}
+
+button:hover{
+    background-color: aqua;
+}

@@ -9,7 +9,7 @@
     } else if (data.type === "twopart") {
       console.log(data.setup);  
       console.log(data.delivery); 
-      joke.textContent = data.setup + " ... " + data.delivery;
+      joke.textContent = `${data.setup} ... ${data.delivery}`;
     } 
   })
   
