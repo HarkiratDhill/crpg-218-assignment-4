@@ -2,6 +2,7 @@
   .then(response => response.json())
   .then(data => {
     console.log(data); 
+    
     // different joke types that are auto generated 
     if (data.type === "single") {
       console.log(data.joke);
@@ -12,13 +13,15 @@
       joke.textContent = `${data.setup} ... ${data.delivery}`;
     } 
   })
-  
+
     function fetchJoke(category = "Any") {
     const url = `https://v2.jokeapi.dev/joke/${category}?safe-mode`;
     fetch(url)
     .then(response => response.json())
     .then(data => {
       console.log(data);
+      
+      //Joke from Click 
       if (data.type === "single") {
         joke.textContent = data.joke;
       } else if (data.type === "twopart") {
@@ -26,7 +29,8 @@
         console.log(data.delivery);
         joke.textContent = `${data.setup} ... ${data.delivery}`;
       }
-
+      
+      //Title from click
       if (category === "Pun") {
           title.textContent = "Random Pun";
       }
